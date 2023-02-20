@@ -6,10 +6,16 @@ import org.openqa.selenium.support.FindBy;
 
 public class SecurePage extends BasePage{
     @FindBy (id="flash") WebElement alertSuccess;
-    public SecurePage(WebDriver driver) {
-        super(driver);
+    @FindBy (css=".icon-signout") WebElement logoutButton;
+    public SecurePage(WebDriver driver) {super(driver);}
+    public boolean checkIfAlertSuccessIsDisplayed(){return alertSuccess.isDisplayed();}
+
+    public String getAlertMessageText(){
+        return alertSuccess.getText();
     }
-    public boolean checkIfAlertSuccessIsDisplayed(){
-        return alertSuccess.isDisplayed();
+
+    public void clickLogoutButton(){
+        logoutButton.click();
     }
+
 }

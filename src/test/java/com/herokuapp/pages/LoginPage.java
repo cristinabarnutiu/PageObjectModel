@@ -9,21 +9,28 @@ public class LoginPage extends BasePage {
     @FindBy (id="username") private WebElement usernameInput;
     @FindBy (id="password") private WebElement passwordInput;
     @FindBy (css="i.fa-sign-in") private WebElement loginButton;
+    @FindBy (id="flash") private WebElement alertLogout;
 
-    public LoginPage(WebDriver driver) {
-        super(driver);
-    }
+    public LoginPage(WebDriver driver) {super(driver);}
 
-    public void enterUsername(){
-        usernameInput.sendKeys("tomsmith");
-    }
+    public void enterUsername(String username){usernameInput.sendKeys(username);}
 
-    public void enterPassword(){
-        passwordInput.sendKeys("SuperSecretPassword!");
-    }
+    public void enterPassword(String password){passwordInput.sendKeys(password);}
 
-    public void clickLogin(){
+    public void clickLogin(){loginButton.click();}
+
+    public void loginWithUsernameAndPassword(String username, String password){
+        usernameInput.sendKeys(username);
+        passwordInput.sendKeys(password);
         loginButton.click();
+    }
+
+    public boolean checkIfLogoutAlertIsDisplayed(){
+        return alertLogout.isDisplayed();
+    }
+
+    public String getAlertMessageText(){
+        return alertLogout.getText();
     }
 
 }
