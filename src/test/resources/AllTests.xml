@@ -24,4 +24,11 @@
         </classes>
     </test>
 
+    <test name="Dropdown">
+        <classes>
+            <class name="com.herokuapp.tests.DropdownTests"/>
+        </classes>
+    </test>
+
+
 </suite>

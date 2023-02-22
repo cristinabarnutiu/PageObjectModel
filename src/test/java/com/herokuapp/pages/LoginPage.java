@@ -11,6 +11,8 @@ public class LoginPage extends BasePage {
     @FindBy (css="i.fa-sign-in") private WebElement loginButton;
     @FindBy (id="flash") private WebElement alertLogout;
 
+
+
     public LoginPage(WebDriver driver) {super(driver);}
 
     public void enterUsername(String username){usernameInput.sendKeys(username);}

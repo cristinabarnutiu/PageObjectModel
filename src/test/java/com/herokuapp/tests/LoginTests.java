@@ -22,6 +22,8 @@ public class LoginTests extends BaseTest{
         SecurePage securePage = new SecurePage(driver);
         Assert.assertTrue(securePage.checkIfAlertSuccessIsDisplayed());
         Assert.assertTrue(securePage.getAlertMessageText().contains(mesaj));
+
+
     }
 
 

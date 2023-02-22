@@ -16,5 +16,6 @@ public class CheckboxTests extends BaseTest{
     checkboxPage.checkTheSecondCheckBox();
     checkboxPage.checkTheFirstCheckBox();
     Assert.assertTrue(checkboxPage.checkIfBothCheckboxesAreChecked());
+
     }
 }
