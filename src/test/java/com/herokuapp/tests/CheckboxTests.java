@@ -13,8 +13,8 @@ public class CheckboxTests extends BaseTest{
     driver = new ChromeDriver();
     driver.get(CHECKBOX_URL);
     CheckboxPage checkboxPage = new CheckboxPage(driver);
-    checkboxPage.checkTheSecondCheckBox();
     checkboxPage.checkTheFirstCheckBox();
+    checkboxPage.checkTheSecondCheckBox();
     Assert.assertTrue(checkboxPage.checkIfBothCheckboxesAreChecked());
 
     }
